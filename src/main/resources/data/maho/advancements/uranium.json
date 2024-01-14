@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "maho:uranium"
+    },
+    "title": "Why is bro so dumb",
+    "description": "Told ya to not eat that Uranium...",
+    "background": "maho:textures/block/uranium_block.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "maho:uranium"
+          ]
+        }
+      }
+    }
+  }
+}

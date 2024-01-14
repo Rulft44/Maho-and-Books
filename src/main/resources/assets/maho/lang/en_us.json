@@ -1,0 +1,9 @@
+{
+  "item.maho.uranium": "Uranium",
+  "item.maho.fire_book": "Fire Grimoire",
+
+  "itemGroup.debugtab": "Debug Tab",
+
+  "tooltip.maho.uranium.tooltip": "§4DON'T§r eat this, seriously!",
+  "tooltip.maho.fire_book.tooltip": "A special Grimoire only given to those with great fire powers"
+}
