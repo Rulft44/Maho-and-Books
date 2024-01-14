@@ -17,6 +17,9 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, MahoMod.MOD_ID);
 
 
+    public static final RegistryObject<Item> FIREBALL_SCROLL = ITEMS.register("fireball_scroll",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).rarity(Rarity.COMMON)));
+
     public static final RegistryObject<Item> URANIUM = ITEMS.register("uranium",
             () -> new UraniumItem(new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).food(ModFoods.URANIUM)));
 
