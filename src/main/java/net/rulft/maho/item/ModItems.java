@@ -10,6 +10,8 @@ import net.minecraftforge.registries.RegistryObject;
 import net.rulft.maho.MahoMod;
 import net.rulft.maho.item.custom.FireBookItem;
 import net.rulft.maho.item.custom.UraniumItem;
+import net.rulft.maho.spell.fire.FireballSpell;
+import net.rulft.maho.spell.fire.HeatCloudSpell;
 
 public class ModItems {
 
@@ -18,8 +20,9 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> FIREBALL_SCROLL = ITEMS.register("fireball_scroll",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).rarity(Rarity.COMMON)));
-
+            () -> new FireballSpell(new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> HEATCLOUD_SCROLL = ITEMS.register("heatcloud_scroll",
+            () -> new HeatCloudSpell(new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> URANIUM = ITEMS.register("uranium",
             () -> new UraniumItem(new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).food(ModFoods.URANIUM)));
 
