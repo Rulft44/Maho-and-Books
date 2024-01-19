@@ -9,5 +9,7 @@
   "tooltip.maho.uranium.tooltip": "§4DON'T§r eat this, seriously!",
   "tooltip.maho.fire_book.tooltip": "A special Grimoire only given to those with great fire powers",
   "tooltip.maho.fireball_scroll.tooltip": "Cast a Fireball that explodes on impact!",
-  "tooltip.maho.heatcloud_scroll.tooltip": "Makes a cloud around you that ignites enemies!"
+  "tooltip.maho.heatcloud_scroll.tooltip": "Makes a cloud around you that ignites enemies!",
+
+  "effect.maho.suppression": "Suppression"
 }

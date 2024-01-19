@@ -15,6 +15,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import net.rulft.maho.effect.ModEffects;
 import net.rulft.maho.item.custom.CustomLargeFireball;
 import net.rulft.maho.spell.Spell;
 import org.jetbrains.annotations.Nullable;
@@ -34,6 +35,12 @@ public class FireballSpell extends Item implements Spell{
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
         ItemStack itemStack = player.getItemInHand(usedHand);
+
+        // Check for the Suppression effect
+        if (player.hasEffect(ModEffects.SUPPRESSION.get())) {
+            // Return a result indicating that the item cannot be used under Suppression
+            return new InteractionResultHolder<>(InteractionResult.FAIL, player.getItemInHand(usedHand));
+        }
 
         if (!level.isClientSide) {
             // Cast the spell
