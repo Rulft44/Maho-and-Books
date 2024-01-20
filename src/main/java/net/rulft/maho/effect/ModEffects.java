@@ -12,7 +12,7 @@ public class ModEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS
             = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, MahoMod.MOD_ID);
 
-    public static final RegistryObject<MobEffect> SUPPRESSION = MOB_EFFECTS.register("suppresion",
+    public static final RegistryObject<MobEffect> SUPPRESSION = MOB_EFFECTS.register("suppression",
             () -> new SuppressionEffect(MobEffectCategory.NEUTRAL, 4335196));
 
     public static void register(IEventBus eventBus) {
