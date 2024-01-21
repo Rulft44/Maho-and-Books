@@ -1,23 +1,19 @@
 package net.rulft.maho;
 
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.TextComponent;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.util.FakePlayer;
-import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.rulft.maho.item.ModItems;
-import net.rulft.maho.item.custom.grimoire.ExampleBook;
 import net.rulft.maho.item.custom.grimoire.FireBook;
+import net.rulft.maho.item.custom.grimoire.GrimoireItem;
 
 import static net.rulft.maho.MahoMod.MOD_ID;
-import static org.codehaus.plexus.util.StringUtils.capitalizeFirstLetter;
 
 // Event handler class
 @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
@@ -47,19 +43,18 @@ public class ModEvents {
     // Method to give a random Grimoire to the player
     private static void giveRandomGrimoire(Player player) {
         // Add your Grimoire items to this array
-        Item[] grimoires = {ModItems.FIRE_BOOK.get()};
+        Item[] grimoires = {ModItems.FIRE_BOOK.get(),
+                            ModItems.EARTH_BOOK.get()};
 
         // Get a random Grimoire from the array
         Item randomGrimoire = grimoires[player.getRandom().nextInt(grimoires.length)];
 
         // Determine the Grimoire type based on the item
-        String grimoireType = "generic";  // Default value
-        if (randomGrimoire instanceof FireBook) {
-            grimoireType = ((FireBook) randomGrimoire).getGrimoireType();
+        String grimoireType = "Generic";  // Default value
+        if (randomGrimoire instanceof GrimoireItem) {
+            grimoireType = ((GrimoireItem) randomGrimoire).getGrimoireType();
         }
 
-        // Capitalize the first letter
-        grimoireType = capitalizeFirstLetter(grimoireType);
 
         // Create the formatted Grimoire name with no formatting for the player's name
         String playerName = player.getDisplayName().getString();
@@ -71,11 +66,9 @@ public class ModEvents {
         // Set the KeepOnDeath attribute to true
         grimoireStack.getOrCreateTag().putBoolean("KeepOnDeath", true);
 
-        // Clear any existing formatting from anvil renaming
-        grimoireStack.setHoverName(new TextComponent("").withStyle(ChatFormatting.RESET));
-
         // Set the display name separately to avoid formatting issues
         grimoireStack.setHoverName(new TextComponent(grimoireName));
+
         // Give the Grimoire to the player
         player.getInventory().add(grimoireStack);
     }

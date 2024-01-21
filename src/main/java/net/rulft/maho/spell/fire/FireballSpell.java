@@ -90,6 +90,6 @@ public class FireballSpell extends Item implements Spell{
     // Tooltip
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(new TranslatableComponent("tooltip.maho.fireball_scroll.tooltip"));
+        pTooltipComponents.add(new TranslatableComponent("tooltip.maho.fireball_spell.tooltip"));
     }
 }

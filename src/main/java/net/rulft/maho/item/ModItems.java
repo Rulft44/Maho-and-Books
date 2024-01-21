@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rulft.maho.MahoMod;
+import net.rulft.maho.item.custom.grimoire.EarthBook;
 import net.rulft.maho.item.custom.grimoire.FireBook;
 import net.rulft.maho.spell.fire.FireballSpell;
 import net.rulft.maho.spell.fire.HeatCloudSpell;
@@ -26,8 +27,9 @@ public class ModItems {
 
     //------------------ Grimoires ------------------
     public static final RegistryObject<Item> FIRE_BOOK = ITEMS.register("fire_book", () ->
-            new FireBook("fire", new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).rarity(Rarity.EPIC)));
-
+            new FireBook("Fire", new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> EARTH_BOOK = ITEMS.register("earth_book", () ->
+            new EarthBook("Earth", new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).rarity(Rarity.EPIC)));
     //------------------ Misc Items ------------------
 
 

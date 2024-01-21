@@ -1,5 +1,5 @@
 {
-	"credit": "Made with Blockbench",
+	"credit": "Rulft",
 	"textures": {
 		"0": "maho:item/fire_book",
 		"particle": "maho:item/fire_book"
@@ -267,12 +267,12 @@
 		},
 		{
 			"from": [1.85, 12.4, 10],
-			"to": [2.1, 13.4, 13],
+			"to": [1.85, 13.4, 13],
 			"rotation": {"angle": 22.5, "axis": "y", "origin": [3, 12, 6.5]},
 			"faces": {
-				"north": {"uv": [8.5, 3, 9, 3.5], "texture": "#0"},
-				"east": {"uv": [2, 2, 5, 3], "texture": "#0"},
-				"south": {"uv": [7.5, 3, 8, 3.5], "texture": "#0"},
+				"north": {"uv": [7.5, 3, 9, 3.5], "texture": "#0"},
+				"east": {"uv": [7.5, 3, 8, 3.5], "texture": "#0"},
+				"south": {"uv": [8.5, 3, 9, 3.5], "texture": "#0"},
 				"west": {"uv": [7.5, 3, 9, 3.5], "texture": "#0"},
 				"up": {"uv": [9, 3.5, 7.5, 3], "rotation": 90, "texture": "#0"},
 				"down": {"uv": [9, 3, 7.5, 3.5], "rotation": 270, "texture": "#0"}
@@ -280,7 +280,7 @@
 		},
 		{
 			"from": [1.85, 10.6, 11],
-			"to": [2.1, 11.6, 12],
+			"to": [1.85, 11.6, 12],
 			"rotation": {"angle": 22.5, "axis": "y", "origin": [3, 12, 6.5]},
 			"faces": {
 				"north": {"uv": [8, 4, 8.5, 4.5], "texture": "#0"},

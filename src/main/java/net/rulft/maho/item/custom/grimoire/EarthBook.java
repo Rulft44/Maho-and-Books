@@ -11,12 +11,11 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ExampleBook extends Item {
-    private String grimoireType = "generic";
-
-    public ExampleBook(String grimoireType, Item.Properties pProperties) {
+public class EarthBook extends GrimoireItem {
+    private String grimoireType;
+    public EarthBook(String grimoireType, Properties pProperties) {
         super(pProperties);
-        this.grimoireType = "generic";
+        this.grimoireType = grimoireType;
     }
 
     public String getGrimoireType() {
@@ -27,8 +26,8 @@ public class ExampleBook extends Item {
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
         // Add specific details based on the Grimoire type
-        tooltip.add(new TextComponent("A special Grimoire for those with great ").withStyle(ChatFormatting.RED)
-                .append(new TextComponent("Generic Powers").withStyle(ChatFormatting.DARK_RED)));
+        tooltip.add(new TextComponent("A special Grimoire for those with great ").withStyle(ChatFormatting.GRAY)
+                .append(new TextComponent(getGrimoireType() + " Powers").withStyle(ChatFormatting.GOLD)));
 
 
         super.appendHoverText(stack, worldIn, tooltip, flagIn);
