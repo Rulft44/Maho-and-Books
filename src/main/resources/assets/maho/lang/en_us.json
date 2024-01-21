@@ -1,15 +1,26 @@
 {
+
+  "_": "----- ITEMS -----",
+
   "item.maho.uranium": "Uranium",
-  "item.maho.fire_book": "Fire Grimoire",
-  "item.maho.fireball_scroll": "Fireball Scroll",
-  "item.maho.hetcloud_scroll": "Heat Cloud Scroll",
+  "item.maho.fire_book": "§cFire Grimoire",
+  "item.maho.fireball_spell": "Fireball Spell",
+  "item.maho.heatcloud_spell": "Heat Cloud Spell",
+
+
+  "-": "----- Creative Mode Tabs -----",
 
   "itemGroup.debugtab": "Debug Tab",
 
-  "tooltip.maho.uranium.tooltip": "§4DON'T§r eat this, seriously!",
-  "tooltip.maho.fire_book.tooltip": "A special Grimoire only given to those with great fire powers",
-  "tooltip.maho.fireball_scroll.tooltip": "Cast a Fireball that explodes on impact!",
-  "tooltip.maho.heatcloud_scroll.tooltip": "Makes a cloud around you that ignites enemies!",
+
+  ".": "----- Tooltips -----",
+
+  ",": "--- Spell Tooltips ---",
+
+  "tooltip.maho.fireball_spell.tooltip": "Cast a Fireball that explodes on impact!\n\n§cFire Spell",
+  "tooltip.maho.heatcloud_spell.tooltip": "Makes a cloud around you that ignites enemies!\n\n§cFire Spell",
+
+  ":": "----- Effects -----",
 
   "effect.maho.suppression": "Suppression"
 }

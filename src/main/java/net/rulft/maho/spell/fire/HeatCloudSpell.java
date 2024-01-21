@@ -10,7 +10,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -20,6 +19,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.rulft.maho.effect.ModEffects;
+import net.rulft.maho.item.custom.grimoire.FireBook;
 import net.rulft.maho.spell.Spell;
 import org.jetbrains.annotations.Nullable;
 
@@ -50,17 +50,25 @@ public class HeatCloudSpell extends Item implements Spell {
             return new InteractionResultHolder<>(InteractionResult.FAIL, player.getItemInHand(usedHand));
         }
 
-        if (!level.isClientSide) {
-            // Cast the spell
-            castWithEffect(player, 1.0); // Initial multiplier is 1.0
 
-            if (!player.isCreative()) {
-                itemStack.hurt(1, level.random, null);
+
+        // Check if the player is holding the Grimoire in their off hand
+        ItemStack offHandStack = player.getItemInHand(InteractionHand.OFF_HAND);
+        if (offHandStack.getItem() instanceof FireBook) {
+            // Continue with the spell casting logic
+            if (!level.isClientSide) {
+                // Cast the spell
+                castWithEffect(player, 1.0); // Initial multiplier is 1.0
+
+                if (!player.isCreative()) {
+                    itemStack.hurt(1, level.random, null);
+                }
+
+                return new InteractionResultHolder<>(InteractionResult.SUCCESS, itemStack);
             }
-
-            return new InteractionResultHolder<>(InteractionResult.SUCCESS, itemStack);
         }
 
+        // If not holding the Grimoire, return a fail result
         return new InteractionResultHolder<>(InteractionResult.FAIL, itemStack);
     }
 
@@ -122,6 +130,6 @@ public class HeatCloudSpell extends Item implements Spell {
     // Tooltip
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(new TranslatableComponent("tooltip.maho.heatcloud_scroll.tooltip"));
+        pTooltipComponents.add(new TranslatableComponent("tooltip.maho.heatcloud_spell.tooltip"));
     }
 }
