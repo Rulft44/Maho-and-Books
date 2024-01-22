@@ -2,7 +2,7 @@
 
   "_": "----- ITEMS -----",
 
-  "item.maho.uranium": "Uranium",
+  "item.maho.strange_scroll": "Strange Scroll",
   "item.maho.fire_book": "§cFire Grimoire",
   "item.maho.earth_book": "§7Earth Grimoire",
   "item.maho.fireball_spell": "Fireball Spell",
@@ -17,11 +17,12 @@
 
   ".": "----- Tooltips -----",
 
+  "tooltip.maho.strange_scroll.tooltip": "Make sure to have a Grimoire in your off hand\n§7§o- What could this scroll contain?",
   ",": "--- Spell Tooltips ---",
 
-  "tooltip.maho.fireball_spell.tooltip": "§cFire Spell\nCast a Fireball that explodes on impact!",
-  "tooltip.maho.heatcloud_spell.tooltip": "§cFire Spell\nMakes a cloud around you that ignites enemies!",
-  "tooltip.maho.geokinesis_spell.tooltip": "§7Earth Spell\nLaunches a rock!",
+  "tooltip.maho.fireball_spell.tooltip": "§cFire Spell§r, Cast a Fireball that explodes on impact!",
+  "tooltip.maho.heatcloud_spell.tooltip": "§cFire Spell§r, Makes a cloud around you that ignites enemies!",
+  "tooltip.maho.geokinesis_spell.tooltip": "§7Earth Spell§r, Launches a rock!",
 
   ":": "----- Effects -----",
 
