@@ -21,18 +21,26 @@ import net.minecraft.world.phys.Vec3;
 import net.rulft.maho.effect.ModEffects;
 import net.rulft.maho.item.custom.grimoire.FireBook;
 import net.rulft.maho.spell.Spell;
+import net.rulft.maho.spell.SpellItem;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class HeatCloudSpell extends Item implements Spell {
+public class HeatCloudSpell extends SpellItem implements Spell {
 
     private static final int CLOUD_RADIUS = 5;
     int cooldownTime = 3;
 
 
-    public HeatCloudSpell(Properties properties) {
+    public HeatCloudSpell(String spellType, Properties properties) {
         super(properties);
+        this.spellType = spellType;
+    }
+
+    private String spellType;
+
+    public String getSpellType() {
+        return spellType;
     }
 
     @Override

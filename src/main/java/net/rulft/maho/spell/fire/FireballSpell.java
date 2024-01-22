@@ -19,14 +19,22 @@ import net.rulft.maho.effect.ModEffects;
 import net.rulft.maho.item.custom.CustomLargeFireball;
 import net.rulft.maho.item.custom.grimoire.FireBook;
 import net.rulft.maho.spell.Spell;
+import net.rulft.maho.spell.SpellItem;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class FireballSpell extends Item implements Spell{
+public class FireballSpell extends SpellItem implements Spell{
 
-    public FireballSpell(Properties pProperties) {
+    public FireballSpell(String spellType, Properties pProperties) {
         super(pProperties);
+        this.spellType = spellType;
+    }
+
+    private String spellType;
+
+    public String getSpellType() {
+        return spellType;
     }
 
 

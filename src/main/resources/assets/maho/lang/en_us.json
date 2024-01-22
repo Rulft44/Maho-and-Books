@@ -7,6 +7,7 @@
   "item.maho.earth_book": "§7Earth Grimoire",
   "item.maho.fireball_spell": "Fireball Spell",
   "item.maho.heatcloud_spell": "Heat Cloud Spell",
+  "item.maho.geokinesis_spell": "Geokinesis Spell",
 
 
   "-": "----- Creative Mode Tabs -----",
@@ -18,8 +19,9 @@
 
   ",": "--- Spell Tooltips ---",
 
-  "tooltip.maho.fireball_spell.tooltip": "Cast a Fireball that explodes on impact!\n\n§cFire Spell",
-  "tooltip.maho.heatcloud_spell.tooltip": "Makes a cloud around you that ignites enemies!\n\n§cFire Spell",
+  "tooltip.maho.fireball_spell.tooltip": "§cFire Spell\nCast a Fireball that explodes on impact!",
+  "tooltip.maho.heatcloud_spell.tooltip": "§cFire Spell\nMakes a cloud around you that ignites enemies!",
+  "tooltip.maho.geokinesis_spell.tooltip": "§7Earth Spell\nLaunches a rock!",
 
   ":": "----- Effects -----",
 

@@ -19,17 +19,25 @@ public class ModItems {
 
 
     //------------------ Spells ------------------
-    public static final RegistryObject<Item> FIREBALL_SPELL = ITEMS.register("fireball_spell",
-            () -> new FireballSpell(new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).rarity(Rarity.COMMON)));
-    public static final RegistryObject<Item> HEATCLOUD_SPELL = ITEMS.register("heatcloud_spell",
-            () -> new HeatCloudSpell(new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).rarity(Rarity.COMMON)));
 
+    //--- Fire ---
+    public static final RegistryObject<Item> FIREBALL_SPELL = ITEMS.register("fireball_spell",
+            () -> new FireballSpell("Fire", new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> HEATCLOUD_SPELL = ITEMS.register("heatcloud_spell",
+            () -> new HeatCloudSpell("Fire", new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).rarity(Rarity.COMMON)));
+    //--- Lightning ---
+    //--- Water ---
+    //--- Earth ---
+    //--- Wind ---
+    //--- Dark ---
 
     //------------------ Grimoires ------------------
     public static final RegistryObject<Item> FIRE_BOOK = ITEMS.register("fire_book", () ->
             new FireBook("Fire", new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> EARTH_BOOK = ITEMS.register("earth_book", () ->
             new EarthBook("Earth", new Item.Properties().tab(ModCreativeModeTab.DEBUG_TAB).rarity(Rarity.EPIC)));
+
+
     //------------------ Misc Items ------------------
 
 
